@@ -1,0 +1,94 @@
+\documentclass[12pt]{article}
+\usepackage[spanish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{float}
+\usepackage{hyperref}
+\usepackage{graphicx}
+\usepackage{listings}%Para código bonito
+\usepackage{apacite}
+\deactivatequoting
+\begin{document}
+\hypersetup{pageanchor=false}
+\begin{titlepage}
+\begin{center}
+\vspace{2cm}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=7cm]{logo_fes.png}\\
+\includegraphics[width=7cm]{Flisol.png}
+\end{center}
+\end{figure}
+\Huge{\textbf{TEMARIO:}}\\
+\Huge{\textbf{Taller básico de \LaTeX}}
+%\vspace{0.6cm}
+\rule{100mm}{0.1mm}\\
+\begin{Large}
+Ponente: Víctor Hugo Vázquez Montoya
+\href{mailto:victor.hugovz@comunidad.unam.mx}{victor.hugovz@comunidad.unam.mx} 
+\end{Large}
+\vspace{2cm}
+\end{center}
+\end{titlepage}
+\hypersetup{pageanchor=true}
+\section*{Objetivo:}
+Los participantes adquirirán la habilidad de hacer documentos científicos de alta calidad tipográfica con el fin de producirlos 
+por sí mismos.
+\section*{Temas}
+\begin{enumerate}
+\item \textbf{\large {Primeros pasos en \LaTeX}}
+\vspace{5mm}
+
+1.1. ¿Qué es \LaTeX\, y porqué se considera software libre?\\
+1.2. Instalación de un entorno integrado de edición para \LaTeX \,: Kile Comandos en la terminal para su instalación\\
+1.3. Conociendo Kile: Menús y barras de herramientas\\
+1.4. ¿Qué hago si no pude instalar Kile?. \LaTeX\, en la nube: \href{https://www.overleaf.com/}{Overleaf}\\
+\item \textbf{\large {La estructura de un documento en \LaTeX}}
+\vspace{5mm}
+
+2.1. ¿Cómo escribir un documento desde el inicio?: El comando 
+\begin{lstlisting}
+\documentclass[options]{style}
+\end{lstlisting}
+2.2. Paquetería escencial: El preámbulo\\
+2.3. Errores comunes al compilar mi documento\\
+2.4. Tipos de documentos en \LaTeX \\
+2.5. Distintos tipos y tamaños de fuentes.\\
+2.6 Listado y enumeración de elementos con viñetas\\
+2.7. Secciones, subsecciones, capítulos: Elaboración automática de índices y de una plantilla
+\item \textbf{\large {Entornos matemáticos}}
+\vspace{5mm}
+
+3.1. Paquetería básica en el preámbulo para escribir ecuaciones\\
+3.2. Ecuaciones referenciadas con etiquetas en el texto previo y posterior\\
+3.3. Entornos matemáticos simples 
+\pagebreak
+\item \textbf{\large {Tablas y figuras}}
+\vspace{5mm}
+
+4.1. Paquetería escencial para hacer tablas\\
+4.2. Posicionamento de tablas\\
+4.3. Un propio índice de tablas\\
+4.4. Paquetería escencial para insertar figuras\\
+4.5. Gráficos con texto y sin texto\\
+4.6  Un propio índice de figuras
+\item \textbf{\large {Bibliografías artesanales}}
+\vspace{5mm}
+
+5.1. Paquetería en el preámbulo para la bibliografía\\
+5.2. Notas al pie de página\\
+5.3. Los archivos \textbf{.bib} y su estructura\\
+5.3. Formas de citación: Estilos y los administradores de referencias\\
+5.4. Bibliografía en formato APA: Paquetería y comandos
+\end{enumerate}
+\textbf{Sugerencias de evaluación para el aprendizaje}
+\begin{itemize}
+ \item Desarrollo de ejemlos específicos de cada uno de los subtemas
+ \item Utilizar recursos didácticos en línea
+ \item Revisión constante por parte del ponente a las dudas que surjan durante el taller
+
+\end{itemize}
+\bibliographystyle{apacite}
+\nocite{*}
+\bibliography{references}
+\end{document}
+%fin
