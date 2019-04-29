@@ -1,0 +1,99 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage{blindtext}%Carga de texto automático 
+\usepackage[nottoc,numbib]{tocbibind}%Usé este paquete para que las referencias aparezcan en el índice
+\usepackage{graphicx}%Paquete para que las imágenes que carguemos en nuestro documento se puedan visualizar
+\usepackage{float}%Paquete esencial para el correcto posicionamiento de las figuras y tablas
+\usepackage{hyperref}%Para hacer referencias cruzadas en el índice, tablas, figuras, ecuaciones, referencias, etc.
+\usepackage{natbib}%Para las bibliografías 
+\usepackage{color}%Para cargar colores
+\usepackage{amsmath}%Para escribir formas matemáticas
+\usepackage{amsfonts}%Para escribir fuentes de matemáticas como los símbolos de integral, pertenencia, etc.
+\usepackage{ragged2e}%Para justificar el texto en mi documento
+\title{Mi primer documento en \LaTeX}
+\author{Víctor Hugo Vázquez Montoya}
+\date{\small{\today}}
+\begin{document}
+\maketitle
+\tableofcontents
+\section{Introducción}
+Hola mi nombre es Víctor Hugo y este es mi primer documento en \LaTeX!
+\subsection{Primera parte}
+%\textbf{}Nos sirve para resaltar texto en negritas
+%\textit{}Nos sirve para resaltar texto en itálica
+Estoy en la \textbf{carrera} de \small{MAC} en {\Large 8vo semestre} factorial y me gusta escuchar la radio, la música en {\large inglés}, los tacos y ya me quiero titular.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.4]{latex_lion.jpeg}
+    \caption{La mascota de \LaTeX}
+    \label{fig:my_label}
+\end{figure}
+Por ejemplo la figura del león mostrada en \ref{fig:my_label}, a mi me gustaba la \textit{materia de Minería de datos} porque aprendí a programar en {\tiny Python} y me introduje por primera vez al software libre y al sistema operativo \texttt{Ubuntu.}
+\vspace{5mm}
+
+{\textbf{\Huge Más texto, más texto}}\\
+{\normalsize Hoy aprendí en el taller de \LaTeX\,} cuáles son los tipos de letra y voy a aprender los {\footnotesize tamaños} de los mismos.
+\section{Segunda parte}% * sirve para quitar numeración automática
+\subsection{Tablas}
+Para poder insertar tablas necesitamos de varios comandos:
+\begin{table}[H]
+    \centering
+    \begin{tabular}{|c|c|}
+    \hline
+        \textbf{Nombre} & \textbf{Peso}  \\ \hline
+        Emilio & 70kg\\ \hline
+            Daniel & 67kg\\ \hline
+            Jimena & 45kg \\ \hline
+            David & 65kg \\ \hline
+            Angel & 75kg \\ \hline
+            Felipe & 80kg \\ \hline
+            Jesus & 60kg \\ \hline
+            Angel & 52kg \\ \hline
+            Benjamín & 90kg \\ \hline
+    \end{tabular}
+    \caption{Pesos de los participantes en taller básico de \LaTeX}
+    \label{tab:1}
+\end{table}
+{\normalsize Hablamos de los pesos del taller tal y como se muestra en la tabla \ref{tab:1}} y {\tiny minería de datos} revisado en \cite{primerart}
+\section{Lo que no vimos}
+\subsection{Color al texto}
+Para poner colores a nuestro texto dentro de un documento, lo que debemos hacer antes que otra cosa suceda es cargar en el preámbulo el paquete \textbf{color}\\
+Ejemplo\\
+\textbf{Descripción de un paisaje soleado en el campo:} El cielo se puede apreciar \textcolor{blue}{azul} durante las mañanas, el sol brilla con una intensidad \textcolor{yellow}{amarilla} y el \textcolor{red}{rojo} carmesí de los pétalos de una rosa en el jardín .
+\subsection{Entornos para listar y numerar}
+En ocasiones es necesario distribuir la información que se considera relevante como las instrucciones de una tarea o la descripción de ciertos conceptos que nos poden, para eso utilizaremos tres entornos: \texttt{itemize, enumerate y description}. Por ejemplo:
+\begin{itemize}
+    \item \textbf{Itemize}: Listamos algunas características del entorno
+    \item El bullet en común siempre viene por default 
+    \item  Podemos listar los elementos que querramos
+\end{itemize}
+Ahora veamos un ejemplo con \textsc{enumerate}%este es un tipo de letra, es para ponerlas en mayúsculas
+\begin{enumerate}
+    \item El comando para enumerar es el mismo en el caso de \textit{itemize}, solo que en esta ocasión pone los números de manera automática y progresiva
+    \item En este entorno, no es necesario dar un salto de línea como cuando escribirmos texto plano.
+\end{enumerate}
+\subsection{Por último: Algunas ecuaciones}
+Para escribir ecuaciones con texto combinado, debemos cargar en el preámbulo los paquetes de: \emph{amsmath, amsfonts}. Debemos considerar que las ecuaciones se deben ingresar entre dos signos de \$\$ para que compile correctamente overleaf% El uso del comando \emph{} nos sirve para enfatizar el contenido que hay dentro de las llaves.
+\subsubsection{Ejemplos}
+Hablando de las ecuaciones lineales como $3x+y=10$ de dos variables. Si queremos que resalte la ecuación debemos anteponer el comando {\textbackslash{displaystyle}}. Por ejemplo:  $\displaystyle \int_{a}^{b}\frac{dy}{dx}f(x)dx=F(b)-F(a)\in \mathbb{R}$\\
+Por otro lado, si queremos que el texto quede separado de la ecuación, lo que debemos hacer es escribir la ecuación dentro del entorno {\textbackslash{begin\{equation\}\texttt{aquí va mi ecuación sin encerrarla entre signos de pesos}\{\textbackslash{end}\\{equation\}}}}, es decir:
+\begin{equation}
+    \int_{a}^{b}\frac{dy}{dx}f(x)dx=F(b)-F(a) \in \mathbb{R}
+\end{equation}
+\subsubsection{Ya por último y terminar lo que no terminé\ldots ¡Disculpen!. Vamos a revisar cómo alinear texto.}%El comando  \ldots sirve para poner tres puntos suspensivos
+\begin{flushleft}
+Vamos a copiar parte del texto en el cual probamos los tipos y tamaños de fuentes y aplicarle los estilos de texto al centro, en específico con lo que ya escribí en éste párrafo es más que suficiente para alinearlo a la \textcolor{green}{izquierda}.  Fíjense en el \textbf{entono} en el cual está encerrado este párrafos
+\end{flushleft}
+\begin{center}
+    Recuperamos el texto anterior , en específico con lo que ya escribí en éste párrafo es más que suficiente pero ahora lo vamos alinear al \textbf{centro}. Fíjense en el \textcolor{red}{entono} en el cual está encerrado este párrafos
+\end{center}
+\textit{Por último, texto alineado a la derecha:}
+\begin{flushright}
+Por ejemplo la figura del león mostrada en \ref{fig:my_label}, a mi me gustaba la \textit{materia de Minería de datos} porque aprendí a programar en {\tiny Python} y me introduje por primera vez al software libre y al sistema operativo \texttt{Ubuntu.}
+\end{flushright}
+Por defecto \LaTeX\ ya justifica el texto, pero si lo quisierámos justificar en determinado momento lo debemos colocar debajo del comando \textbackslash{justify}, \textsc{siempre y cuando carguemos en el preámbulo el paquete} \emph{ragged2e}
+\bibliographystyle{plain}%Si se dan cuenta el título de "Referencias" ya no lo tenemos que crear con el comando \section{Referencias}
+\bibliography{referencias}
+\nocite{*}
+\end{document}
